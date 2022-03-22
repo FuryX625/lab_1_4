@@ -3,7 +3,7 @@ class Main {
   public static void main(String[] args) {
     Scanner odczyt = new Scanner(System.in);
     int wybor;
-    double r1, r2, polekol, poleprost, a, b;
+    double r1, r2, pole, a, b;
     double pi=3.14;
     System.out.println("wybierz (1-4)");
     System.out.println("1. Suma pól 2 kół");
@@ -14,23 +14,28 @@ class Main {
     switch (wybor) {
       case 1:
         System.out.println("Podaj promien 1. koła");
-        r1=odczyt.nextInt();
+        r1=odczyt.nextDouble();
         System.out.println("Podaj promien 2. koła");
-        r2=odczyt.nextInt();
+        r2=odczyt.nextDouble();
         r1=Math.pow(r1,2);
         r2=Math.pow(r2,2);
-        polekol=pi*r1+pi*r2;
-        System.out.println("Pole kola = "+polekol);
+        pole=pi*r1+pi*r2;
+        System.out.println("Pole kola = "+pole);
        break;
       case 2:
         System.out.println("Podaj długośc boku a: ");
-        a=odczyt.nextInt();
+        a=odczyt.nextDouble();
         System.out.println("Podaj długośc boku b: ");
-        b=odczyt.nextInt();
-        poleprost=a*b;
-        System.out.println("Pole prostokąta to: "+poleprost);
+        b=odczyt.nextDouble();
+        pole=a*b;
+        System.out.println("Pole prostokąta to: "+pole);
       break;
-      
+      case 3:
+        System.out.println("Podaj bok a oraz b: ");
+        a=odczyt.nextDouble();
+        b=odczyt.nextDouble();
+        
+      break;
     }
   }
 }
